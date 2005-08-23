@@ -5,9 +5,13 @@
   <msg key="cancel_and_return">Cancel and Return</msg>
   <msg key="continue_with_delete">Continue with Delete</msg>
   <msg key="Delete">Delete</msg>
+  <msg key="download_installer">Download installer</msg>
   <msg key="ec_serial_numbers">Ecommerce Serial Number Trackings</msg>
   <msg key="Edit">Edit</msg>
   <msg key="None">None</msg>
+  <msg key="Send_mail">Send mail</msg>
+  <msg key="Send_mail_to_owners">Send mail to owners</msg>
+  <msg key="serial_number">Serial Number</msg>
   <msg key="serial_number_1">Serial Number</msg>
   <msg key="serial_number_2">Serial Numbers</msg>
   <msg key="serial_number_Add">Add Serial Number</msg>
@@ -22,6 +26,4 @@
   <msg key="serial_number_start_date">Start Date</msg>
   <msg key="serial_number_Title">Order Number</msg>
   <msg key="serial_number_View">View Serial Number</msg>
-
 </message_catalog>
-    

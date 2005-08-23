@@ -15,6 +15,14 @@ ad_page_contract {
     page_title:onevalue
 }
 
+# Admins can get license keys from any user.
+set user_id [ad_conn user_id]
+set admin_p [acs_user::site_wide_admin_p -user_id $user_id]
+if {!$admin_p} {
+    set owner_id $user_id
+}
+
+
 set page_title "[_ ec-serial-numbers.serial_number_2]"
 set context_bar [ad_context_bar $page_title]
 set package_id [ad_conn package_id]
@@ -62,7 +70,7 @@ template::list::create \
 	    label {[_ ec-serial-numbers.serial_number_Title]}
 	    link_url_eval {[export_vars -base "serial-number-ae" {{serial_id $item_id} {mode display}}]}
         }
-	serial_id {
+	item_id {
 	    label {[_ ec-serial-numbers.serial_number]}
 	}
 	license_key {
@@ -80,6 +88,10 @@ template::list::create \
 	product_name {
 	    label {[_ ec-serial-numbers.serial_number_software_id]} 
 	}
+	download {
+	    label {[_ ec-serial-numbers.download_installer]} 
+	    display_template {<a href="@serial_number.download_link@">[_ acs-kernel.common_Download]</a>}
+	}
     } -actions $actions \
     -orderby $orderbys \
     -filters $filters \
@@ -87,9 +99,10 @@ template::list::create \
     -page_flush_p 0 \
     -page_query_name serial_number_pagination
 
-db_multirow -extend {edit_link delete_link owner_name product_name} serial_number serial_number {} {
+db_multirow -extend {edit_link delete_link owner_name product_name download_link} serial_number serial_number {} {
     set edit_link [export_vars -base "serial-number-ae" {{serial_id $item_id}}]
     set delete_link [export_vars -base "serial-number-delete" {{serial_id $item_id}}]
+    set download_link [export_vars -base "download" {{serial_id $item_id} software_id}]
     set owner_name "$first_names $last_name"
     if {[exists_and_not_null software_id]} {
 	set product_name [ec_product_name $software_id]

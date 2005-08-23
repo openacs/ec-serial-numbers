@@ -8,8 +8,8 @@
 LANG=
 export LANG
 
-SERIAL=$SERIAL
-KEY=$KEY
+SERIAL=@SERIAL@
+KEY=@KEY@
 VER=2.74
 arch=i386 # XXX need to detect x86_64
 
