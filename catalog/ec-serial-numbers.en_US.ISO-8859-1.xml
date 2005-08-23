@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<message_catalog package_key="ec-serial-numbers" package_version="0.01d1" locale="en_US" charset="ISO-8859-1">
+
+  <msg key="admin_categories">Categories Administration</msg>
+  <msg key="cancel_and_return">Cancel and Return</msg>
+  <msg key="continue_with_delete">Continue with Delete</msg>
+  <msg key="Delete">Delete</msg>
+  <msg key="ec_serial_numbers">Ecommerce Serial Number Trackings</msg>
+  <msg key="Edit">Edit</msg>
+  <msg key="None">None</msg>
+  <msg key="serial_number_1">Serial Number</msg>
+  <msg key="serial_number_2">Serial Numbers</msg>
+  <msg key="serial_number_Add">Add Serial Number</msg>
+  <msg key="serial_number_Delete">Delete Serial Number</msg>
+  <msg key="serial_number_Edit">Edit Serial Number</msg>
+  <msg key="serial_number_end_date">Expiration Date</msg>
+  <msg key="serial_number_license_key">License Key</msg>
+  <msg key="serial_number_New">New Serial Number</msg>
+  <msg key="serial_number_New2">Create New Serial Number</msg>
+  <msg key="serial_number_owner_id">Owner</msg>
+  <msg key="serial_number_software_id">Software</msg>
+  <msg key="serial_number_start_date">Start Date</msg>
+  <msg key="serial_number_Title">Order Number</msg>
+  <msg key="serial_number_View">View Serial Number</msg>
+
+</message_catalog>
+    
